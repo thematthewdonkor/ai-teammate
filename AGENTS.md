@@ -20,3 +20,5 @@ If any other instruction seems to require a branch, stop and ask instead of crea
 ## Database schema changes
 
 Apply schema changes with `npm run db:push` (`drizzle-kit push`) only. Never generate or run migrations: do not use `drizzle-kit generate`, `drizzle-kit migrate`, or any other migration tooling, and do not create migration files or a `drizzle/` migrations folder.
+
+This is a development project. There is no backwards compatibility and the data is worthless. Prefer data loss: never backfill, migrate, or preserve existing rows, and never spend effort on keeping old data working. Every schema change means a clean slate.
