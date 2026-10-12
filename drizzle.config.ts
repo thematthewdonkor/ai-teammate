@@ -3,7 +3,7 @@ import { defineConfig } from "drizzle-kit"
 
 config({ path: ".env.local", quiet: true })
 
-// Migrations need the direct (non-pooled) connection.
+// Schema pushes need the direct (non-pooled) connection.
 const url = process.env.DATABASE_URL_UNPOOLED ?? process.env.DATABASE_URL
 
 if (!url) {

@@ -16,3 +16,7 @@ Never create, switch, rename, or delete a branch unless the user names that exac
 All work happens on main. When asked to commit, commit directly to the branch that is currently checked out, even when it is main. Never move work to a feature branch "to be safe".
 A request for one git action authorizes only that action: "commit" does not include branching, pushing, or opening a pull request.
 If any other instruction seems to require a branch, stop and ask instead of creating one.
+
+## Database schema changes
+
+Apply schema changes with `npm run db:push` (`drizzle-kit push`) only. Never generate or run migrations: do not use `drizzle-kit generate`, `drizzle-kit migrate`, or any other migration tooling, and do not create migration files or a `drizzle/` migrations folder.
