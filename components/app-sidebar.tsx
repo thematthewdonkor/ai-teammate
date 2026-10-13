@@ -16,7 +16,8 @@ export function AppSidebar() {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" className="p-0" render={<div />}>
+            <SidebarMenuButton size="lg" className="p-0 group-data-[collapsible=icon]:p-0!"
+              render={<div />}>
               <UserButton
                 showName
                 appearance={{
@@ -24,10 +25,10 @@ export function AppSidebar() {
                     rootBox: "size-full",
                     userButtonTrigger:
                       "size-full justify-start rounded-md px-2 text-sidebar-foreground shadow-none ring-sidebar-ring outline-hidden hover:bg-transparent focus-visible:ring-2 group-data-[collapsible=icon]:px-0",
-                    userButtonBox: "w-full min-w-0 flex-row-reverse gap-2",
+                    userButtonBox: "w-full min-w-0 flex-row gap-2",
                     userButtonOuterIdentifier:
-                      "flex-1 truncate ps-0 text-left text-sm font-medium text-sidebar-foreground",
-                    userButtonAvatarBox: "size-8 rounded-lg",
+                      "order-last flex-1 truncate ps-0 text-left text-sm font-medium text-sidebar-foreground",
+                    userButtonAvatarBox: "order-first size-8 rounded-lg",
                   },
                 }}
               />
